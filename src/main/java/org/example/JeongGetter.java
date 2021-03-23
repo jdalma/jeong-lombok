@@ -1,13 +1,15 @@
 package org.example;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
-// 인터페이스 , 클래스 , 이늄에 붙일 수 있다.
+/**
+ * Jeong-Lombok : Getter
+ * 1. 클래스에만 선언 가능하다.
+ * 2. 클래스에 선언 시 내부 필드를 모두 인식하여 getter 메서드를 생성하여 준다.
+ * @author jeongcode
+ */
+@Documented
 @Target(ElementType.TYPE)
-// 컴파일 타임에 사용하고 바이트코드에서는 필요없다.
 @Retention(RetentionPolicy.SOURCE)
 public @interface JeongGetter {
 
