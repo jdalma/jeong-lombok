@@ -5,10 +5,6 @@
 - `@JeongEntity`
   - Getter
   - Setter
-  - toString
-  - eqauls
-  - Constrcutor
-
 
 # **✍ 키워드**
 
