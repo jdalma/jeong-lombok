@@ -8,9 +8,9 @@
 
 # **✍ 키워드**
 
-📌 **[Lombok은 어떻게 동작하는걸까? (AnnotationProcessor에 대해)](https://jeongcode.github.io/docs/java/Annotation%20Processor/)**
+📌 **[Lombok은 어떻게 동작하는걸까? (AnnotationProcessor에 대해)](https://jdalma.github.io/docs/java/Annotation%20Processor/)**
 
-📌 **[Java 컴파일러](https://jeongcode.github.io/docs/java/javac-principle/)**
+📌 **[Java 컴파일러](https://jdalma.github.io/docs/java/javac-principle/)**
 
 - javax.annotation.processing
   - AbstractProcessor , **[Processor](https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html)**
