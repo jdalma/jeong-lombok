@@ -1,12 +1,10 @@
 # jeong-lombok
+
 **나만의 롬복 만들기**
 - `@JeongGetter` : AST 예제
 - `@JeongPoetGetter` : JavaPoet 예제
-- `@JeongEntity`
-  - Getter
-  - Setter
 
-# **✍ 키워드**
+# **키워드**
 
 📌 **[Lombok은 어떻게 동작하는걸까? (AnnotationProcessor에 대해)](https://jdalma.github.io/docs/java/Annotation%20Processor/)**
 
