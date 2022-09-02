@@ -1,6 +1,7 @@
-# jeong-lombok
+# [**나만의 롬복 만들기**](https://jdalma.github.io/docs/toy-project/Jeong-Lombok/#jeong-lombok-github)
 
-**나만의 롬복 만들기**
+JavaPoet , AnnotationProcessor , Reflection , 자바컴파일러 의 이해를 위한 프로젝트입니다.
+
 - `@JeongGetter` : AST 예제
 - `@JeongPoetGetter` : JavaPoet 예제
 
