@@ -1,4 +1,4 @@
-# [**나만의 롬복 만들기**](https://jdalma.github.io/docs/toy-project/Jeong-Lombok/#jeong-lombok-github)
+# [**`@Getter` 만들기**](https://jdalma.github.io/docs/toy-project/Jeong-Lombok/#jeong-lombok-github)
 
 JavaPoet , AnnotationProcessor , Reflection , 자바컴파일러 의 이해를 위한 프로젝트입니다.
 
