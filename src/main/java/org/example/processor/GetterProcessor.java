@@ -16,7 +16,13 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.Names;
 import org.example.annotation.JeongGetter;
 
-import javax.annotation.processing.*;
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.Messager;
+import javax.annotation.processing.ProcessingEnvironment;
+import javax.annotation.processing.Processor;
+import javax.annotation.processing.RoundEnvironment;
+import javax.annotation.processing.SupportedAnnotationTypes;
+import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.ElementKind;
@@ -49,10 +55,8 @@ public class GetterProcessor extends AbstractProcessor {
         this.names = Names.instance(context);
     }
 
-    @Override
-    public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-        System.out.println("call process =" + annotations);
-        TreePathScanner<Object, CompilationUnitTree> scanner = new TreePathScanner<Object, CompilationUnitTree>(){
+    private TreePathScanner getTreePathScanner() {
+        return new TreePathScanner<Object, CompilationUnitTree>(){
             @Override
             public Trees visitClass(ClassTree classTree, CompilationUnitTree unitTree){
                 JCTree.JCCompilationUnit compilationUnit = (JCTree.JCCompilationUnit) unitTree;
@@ -78,6 +82,12 @@ public class GetterProcessor extends AbstractProcessor {
                 return trees;
             }
         };
+    }
+
+    @Override
+    public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
+        System.out.println("call process =" + annotations);
+        TreePathScanner<Object, CompilationUnitTree> scanner = getTreePathScanner();
 
         for (final Element element : roundEnv.getElementsAnnotatedWith(JeongGetter.class)) {
             System.out.println("call process - getPath() element = " + element);
