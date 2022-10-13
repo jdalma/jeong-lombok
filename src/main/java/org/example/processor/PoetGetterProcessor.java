@@ -44,7 +44,6 @@ public class PoetGetterProcessor extends AbstractProcessor {
             ClassName className = ClassName.get(typeElement);
 
             // 해당 클래스의 필드 가져오기
-            // javax.lang.model.element (https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html)
             List<MethodSpec> methodSpecArr = new ArrayList<MethodSpec>();
             for(Element field : element.getEnclosedElements()){
                 if(field.getKind() == ElementKind.FIELD){
