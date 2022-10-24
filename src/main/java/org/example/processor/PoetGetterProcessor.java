@@ -32,7 +32,7 @@ public class PoetGetterProcessor extends AbstractProcessor {
                 processingEnv.getMessager().printMessage(Diagnostic.Kind.ERROR , "@JeongPoetGetter annotation cant be used on" + element.getSimpleName());
             }
             else{
-                // 인터페이스에 제대로 작성하였다면
+                // 클래스에 제대로 작성하였다면
                 // 로깅
                 processingEnv.getMessager().printMessage(Diagnostic.Kind.NOTE , "@JeongPoetGetter annotation Processing " + element.getSimpleName());
             }
